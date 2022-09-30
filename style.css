@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: var(--very-light-gray);
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+
+    /* container style for vertical alignment of the column cards */
+    display: table;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+}
+
+#main-container {
+    /* helper style for vertical alignment of the column cards */
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.container {
+    max-width: 920px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.content {
+    max-height: 500px;
+    min-height: 445px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 70px;
+    padding: 45px 60px 45px 45px;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 40px;
+}
+
+.content img {
+    width: 65px;
+    height: auto;
+}
+
+.sedans {
+    background-color: var(--bright-orange);
+    border-radius: 5px 0px 0px 5px;
+}
+
+h1 {
+    text-transform: uppercase;
+    color: var(--very-light-gray);
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 4rem;
+}
+
+p {
+    color: var(--transparent-white);
+    line-height: 2.5rem;
+}
+
+.suvs {
+    background-color: var(--dark-cyan);
+}
+
+.luxury {
+    background-color: var(--Very-dark-cyan);
+    border-radius: 0px 5px 5px 0px;
+}
+
+button {
+    background-color: var(--very-light-gray);
+    border-style: none;
+    padding: 20px 30px;
+    border-radius: 35px;
+    width: 145px;
+    cursor: pointer;
+    /* margin-top: 35px; */
+}
+
+.sedans button {
+    color: var(--bright-orange);
+}
+
+.suvs button {
+    color: var(--dark-cyan);
+}
+
+.luxury button {
+    color: var(--Very-dark-cyan);
+}
+
+button:hover {
+    background-color: transparent;
+    border: 2px solid var(--very-light-gray);
+    color: var(--very-light-gray);
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 960px) {
+    button {
+        margin-top: -15px;
+    }
+
+    body {
+        padding: 20px;
+    }
+
+    .content {
+        padding-right: 50px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .content {
+        padding-right: 45px;
+    }
+}
+
+@media screen and (max-width: 791px) {
+    .content {
+        padding-right: 70px;
+    }
+
+    .container {
+        flex-direction: column;
+        width: 330px;
+    }
+
+    .sedans {
+        border-radius: 5px 5px 0px 0px;
+    }
+
+    .luxury {
+        border-radius: 0px 0px 5px 5px;
+    }
+
+    body {
+        overflow-y: auto;
+        padding: 90px 20px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .container {
+        width: 100%;
+    }
+
+    .content {
+        padding-right: 45px;
+    }
+}
